@@ -1,0 +1,56 @@
+<table border="1">
+	<thead>
+		<tr>
+			<th>ArticelNumber</th>
+			<th>Category</th>
+			<th>Price</th>
+			<th>ProductName</th>
+			<th *ngIf="showAllProperties">Writer</th>
+			<th *ngIf="showAllProperties">Year</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let dvd of BookArray">
+			<td> {{dvd.ArticelNumber}} </td>
+			<td> {{dvd.category}} </td>
+			<td> {{dvd.price}} </td>
+			<td> {{dvd.productName}} </td>
+			<td *ngIf="showAllProperties"> {{dvd.writer}} </td>
+			<td *ngIf="showAllProperties"> {{dvd.year}} </td>
+		</tr>
+	</tbody>
+</table>
+<button *ngIf="showAllProperties" (click)="isShowForm=true">Add New Book</button>
+<div *ngIf="showAllProperties">
+	<form *ngIf="isShowForm==true">
+		<table>
+			<tr>
+				<td>ArticelNumber</td>
+				<td><input type="text" name="ArticelNumber" [(ngModel)]="newBook.ArticelNumber"> </td>
+			</tr>
+			<tr>
+				<td>Category</td>
+				<td><input type="text" name="category" [(ngModel)]="newBook.category"> </td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><input type="text" name="price" [(ngModel)]="newBook.price"> </td>
+			</tr>
+			<tr>
+				<td>ProductName</td>
+				<td><input type="text" name="productName" [(ngModel)]="newBook.productName"> </td>
+			</tr>
+			<tr>
+				<td>Writer</td>
+				<td><input type="text" name="writer" [(ngModel)]="newBook.writer"> </td>
+			</tr>
+			<tr>
+				<td>Year</td>
+				<td><input type="text" name="year" [(ngModel)]="newBook.year"> </td>
+			</tr>
+			<tr>
+				<button (click)="addBook()">Add</button>
+			</tr>
+		</table>
+	</form>
+</div>

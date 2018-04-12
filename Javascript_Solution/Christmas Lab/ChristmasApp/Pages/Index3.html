@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Christmas Lab</title>
+
+    <link rel="stylesheet" type="text/css" href="../Css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Css/custom.css">
+
+    <script type="text/javascript" src="../Js/angular.min.js"></script>
+    <script type="text/javascript" src="../Js/christmas2.js"></script>
+</head>
+
+<body ng-app="App" ng-controller="userCtrl">
+<div class="container">
+    <div class="row">
+
+        <h2>Christmas Lab</h2>
+           
+        <div class="col-lg-4">
+            <button type="button" ng-click="Show=true">Show List</button>
+            <div ng-show="Show">
+                <table class="table">
+                    <tr ng-repeat="U in users">
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ U.user }}</td>
+                        <td>{{ U.usersName }}</td>
+                        <td>{{ U.password }}</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

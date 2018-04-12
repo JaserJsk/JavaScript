@@ -1,0 +1,18 @@
+<table border="1">
+	<thead>
+		<tr>
+			<th>ArticelNumber</th>
+			<th>Category</th>
+			<th>Price</th>
+			<th>ProductName</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let game of GameArray">
+			<td> {{game.ArticelNumber}} </td>
+			<td> {{game.category}} </td>
+			<td> {{game.price}} </td>
+			<td> {{game.productName}} </td>
+		</tr>
+	</tbody>
+</table>

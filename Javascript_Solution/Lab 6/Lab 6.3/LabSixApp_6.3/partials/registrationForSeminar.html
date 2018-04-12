@@ -1,0 +1,29 @@
+<div>
+	<h1>Fill Seminar Details</h1>
+</div>
+<div ng-controller="seminarController">
+	<form novalidate>
+		<table>
+			<tr>
+				<td>Seminar Name:</td>
+				<td>
+					<input type="text" name="seminarName" ng-model="seminar.seminarName">
+				</td>
+			</tr>
+			<tr>
+				<td>Seminar Date:</td>
+				<td>
+					<input type="date" name="seminarDate" ng-model="seminar.seminarDate">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#registrationForUser" ng-click="setSeminar()">
+						<button>Next</button>
+					</a>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		</form>
+</div>

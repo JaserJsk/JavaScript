@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lab 5.1</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://localhost:54679/Content/app/custom.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/app/lab_5.1.js"></script>
+</head>
+<body data-ng-app="studentApp">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="studentInfo">
+                <center>
+                    <div class="headingBg">
+                        <h1 class="heading-1">Student Names</h1>
+                    </div>
+                    <div class="info" data-ng-controller="studentListController">
+                        <table data-ng-if="isShowStudent">
+                            <tr data-ng-repeat="student in studentList">
+                                <td>{{student.name}}</td>
+                                <td>{{student.status}}</td>
+                                <td>{{student.education}}</td>
+                            </tr>
+                        </table>
+                        <div class="headingBg">
+                            <input type="button" name="ShowStudents" value="ShowStudents" data-ng-click="showStudents()">
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="courseInfo">
+                <center>
+                    <div class="headingBg">
+                        <h1 class="heading-1">Courses List</h1>
+                    </div>
+                    <div class="info" data-ng-controller="studentListController">
+                        <table data-ng-if="isShowCourses">
+                            <tr data-ng-repeat="course in courseList">
+                                <td>{{course}}</td>
+                            </tr>
+                        </table>
+                        <div class="headingBg">
+                            <input type="button" name="showCourses" value="showCourses" data-ng-click="showCourses()">
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

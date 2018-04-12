@@ -1,0 +1,33 @@
+<div>
+	<h1>Fill User Details</h1>
+</div>
+<div ng-controller="userController">
+	<form novalidate>
+		<table>
+			<tr>
+				<td>User Name:</td>
+				<td>
+					<input type="text" name="UserName" ng-model="user.userName">
+				</td>
+			</tr>
+			<tr>
+				<td>Mobile:</td>
+				<td>
+					<input type="text" name="mobile" ng-model="user.mobile">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#registrationForUser" ng-click="reset()">
+						<button>Register another user</button>
+					</a>
+				</td>
+				<td>
+					<a href="#registrationConfirmation" ng-click="registerUser()">
+						<button>Registration Completed</button>
+					</a>
+				</td>
+			</tr>
+		</table>
+		</form>
+</div>

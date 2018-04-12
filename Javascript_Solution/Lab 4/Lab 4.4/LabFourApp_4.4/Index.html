@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lab 4.4</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://localhost:54679/Content/app/custom.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/app/lab_4.4.js"></script>
+</head>
+
+<body data-ng-app="studentApp">
+    <div class="studentInfo">
+        <center>
+            <div class="headingBg">
+                <h1 class="heading-1">Student List</h1>
+            </div>
+            <div class="info" data-ng-controller="studentListController">
+                <table>
+                    <tr data-ng-repeat="student in studentList">
+                        <td>{{student.name}}</td>
+                        <td>{{student.city}}</td>
+                        <td>{{student.telephone}}</td>
+                    </tr>
+                </table>
+            </div>
+        </center>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<h1>Euro To Swedish</h1>
+
+<label>
+    Euro:
+</label>
+
+<input type="number" name="EuroToSwedish" [(ngModel)]="Euro" (ngModelChange)="onEuroToSwedishChanged()" />
+
+<br />
+
+<label>
+    Swedish Krona: {{EuroToSwedish}}
+</label>
+
+<br />
+
+<h1>Swedish To Euro</h1>
+
+<label>
+    Swedish Krona:
+</label>
+
+<input type="number" name="SwedishToEuro" [(ngModel)]="Swedish" (ngModelChange)="onSwedishToEuroChanged()">
+
+<br />
+
+<label>
+    Euro: {{SwedishToEuro}}
+</label>

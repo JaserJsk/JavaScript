@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col-md-4">
+		<h1>All Products List</h1>
+		<div *ngIf="isAllVisible==true">
+			<app-dvd></app-dvd>
+
+			<app-game></app-game>
+
+			<app-book></app-book>
+		</div>
+		<button (click)="isAllVisible=true">Show All</button>
+	</div>
+	<div class="col-md-4">
+		<h1>All Books List</h1>
+		<div *ngIf="isBookVisible==true">
+			<app-book [showAllProperties]="showAllProperties"></app-book>
+		</div>
+		<button (click)="isBookVisible=true">Show Books</button>
+	</div>
+	<div class="col-md-4"></div>
+</div>
+

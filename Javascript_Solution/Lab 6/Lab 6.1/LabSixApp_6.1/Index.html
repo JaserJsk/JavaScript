@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lab 6.1</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://localhost:54679/Content/app/custom.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/app/lab_6.1.js"></script>
+</head>
+<body data-ng-app="fruitApp">
+    <div class="row" style="padding: 10px; margin-left: 10px; font-size: 20px">
+        <a href="#/">Fruits</a>
+        <a href="#bananas">Bananas</a>
+        <a href="#apples">Apples</a>
+        <a href="#oranges">Oranges</a>
+        <a href="#pears">Pears</a>
+        <a href="#coconut">Coconut</a>
+
+        <div class="card" style="width: 20rem;">
+            <div class="card-block">
+                <p class="card-text">
+                    <div ng-view></div>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

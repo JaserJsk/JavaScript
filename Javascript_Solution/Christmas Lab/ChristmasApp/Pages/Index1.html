@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html ng-app="App">
+<head>
+    <meta charset="utf-8" />
+    <title>Christmas Lab</title>
+
+    <link rel="stylesheet" type="text/css" href="../Css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Css/custom.css">
+    
+    <script type="text/javascript" src="../Js/angular.min.js"></script>
+    <script type="text/javascript" src="../Js/christmas1.js"></script>
+</head>
+
+<body ng-controller="filmsController">
+
+<div class="container">
+
+    <div class="row">
+
+        <h2>Christmas Lab</h2>
+
+        <h2>Logged in as: {{user}}</h2>
+
+        <div class="col-lg-4">
+            <label>Search: <input ng-model="searchText" placeholder="Search Film"></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+
+            <ul>
+                <li data-ng-repeat="f in Film | filter:searchText ">{{ f.title }} - {{ f.date}}</li>
+            </ul>
+        </div>
+
+        <div class="col-lg-4" ng-controller="usersController">
+            <ul>
+                <li data-ng-repeat="u in Users ">{{ u.users }} - {{ u.usersName}} - {{ u.password}}</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<div ng-controller="registrationConfirmationController">
+	<div>
+		<h1>
+			Seminar Name: {{seminarData.seminarName}}
+		</h1>
+	</div>
+	<div>
+		<h1>Registered Users</h1>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Mobile</th>
+			</tr>
+			<tr ng-repeat="user in users">
+				<td>{{user.userName}}</td>
+				<td>{{user.mobile}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

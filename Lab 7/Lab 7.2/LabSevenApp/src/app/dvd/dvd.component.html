@@ -1,0 +1,18 @@
+<table border="1">
+	<thead>
+		<tr>
+			<th>ArticelNumber</th>
+			<th>Category</th>
+			<th>Price</th>
+			<th>ProductName</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let dvd of DvdArray">
+			<td> {{dvd.ArticelNumber}} </td>
+			<td> {{dvd.category}} </td>
+			<td> {{dvd.price}} </td>
+			<td> {{dvd.productName}} </td>
+		</tr>
+	</tbody>
+</table>

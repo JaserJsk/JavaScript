@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lab 5.2</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://localhost:54679/Content/app/custom.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/app/lab_5.2.js"></script>
+</head>
+<body data-ng-app="studentApp">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="studentInfo">
+                <center>
+                    <div class="headingBg">
+                        <h1 class="heading-1">Student Names</h1>
+                    </div>
+                    <div class="info" data-ng-controller="studentListController">
+                        <br />
+                        <table>
+                            <tr data-ng-repeat="student in studentList">
+                                <td>{{student.name}}</td>
+                                <td>{{student.status}}</td>
+                                <td>{{student.education}}</td>
+                            </tr>
+                        </table>
+                        <div class="headingBg">
+                            <input type="button" name="ShowStudents" value="ShowStudents" data-ng-click="showStudents()">
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="courseInfo">
+                <center>
+                    <div class="headingBg">
+                        <h1 class="heading-1">Courses List</h1>
+                    </div>
+                    <div class="info" data-ng-controller="studentListController">
+                        <table>
+                            <tr data-ng-repeat="course in courseList">
+                                <td>{{course}}</td>
+                            </tr>
+                        </table>
+                        <div class="headingBg">
+                            <input type="button" name="showCourses" value="showCourses" data-ng-click="showCourses()">
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <center>
+                    <div>
+                        <h1>Add Student</h1>
+                    </div>
+                    <div data-ng-controller="studentListController">
+                        <div>
+                            <input type="button" name="addStudent" value="Add Student" data-ng-click="addStudent()">
+                        </div>
+                        <form data-ng-if="addStudent==true">
+                            <table>
+                                <tr>
+                                    <td>Name: </td>
+                                    <td>
+                                        <input type="name" name="name" data-ng-model="newStudent.name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Is Active?: </td>
+                                    <td>
+                                        <input type="text" name="name" data-ng-model="newStudent.status">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Education: </td>
+                                    <td>
+                                        <input type="education" name="education" data-ng-model="newStudent.education">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                        <div>
+                            <input type="button" name="showCourses" value="Add Student To Database" data-ng-click="addStudentToDatabase()">
+                        </div>
+                        <div data-ng-if="errorToAddIntoDatabase!==undefined" style="color:red" data-ng-class="{'alert-success': errorType=='success', 'alert-danger': errorType=='fail'}">
+                            {{errorToAddIntoDatabase}}
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

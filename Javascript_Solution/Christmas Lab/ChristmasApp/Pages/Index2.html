@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Christmas Lab</title>
+
+    <link rel="stylesheet" type="text/css" href="../Css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Css/custom.css">
+
+    <script type="text/javascript" src="../Js/angular.min.js"></script>
+    <script type="text/javascript" src="../Js/christmas2.js"></script>
+</head>
+
+<body ng-app="App" ng-controller="userCtrl">
+
+<div class="container">
+    
+    <div class="row">
+        
+        <h2>Christmas Lab</h2>
+
+        <div class="col-lg-4">
+            <form>
+                <!--<div class="form-group">
+                    <label for="us">user:</label>
+                    <input type="text" class="form-control" id="us" ng-model="newU">
+                </div>-->
+                <div class="form-group">
+                    <label for="">User Name:</label>
+                    <input type="text" class="form-control" id="userN" ng-model="newUser">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" ng-model="newPass">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" ng-model="Remember"> Remember me</label>
+                </div>
+                <button type="button" id="btnEmp" class="btn btn-default" ng-click="test2()">Submit</button>
+            </form>
+        </div>
+        <div class="col-lg-4 hidden">
+            <button type="button" ng-click="Show=true">Show List</button>
+            <div ng-show="Show">
+
+                <table class="table">
+                    <tr ng-repeat="U in users">
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ U.user }}</td>
+                        <td>{{ U.usersName }}</td>
+                        <td>{{ U.password }}</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

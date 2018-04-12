@@ -1,0 +1,13 @@
+﻿body {
+}
+
+p.serif {
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size: 28;
+    color: black;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
